@@ -1,0 +1,216 @@
+.topNav {
+    background-color: limegreen;
+    overflow: hidden; /* Clear floats */
+    padding: 15px; /* Add padding to create space around the content */
+    text-align: right; /* Align content to the right */
+  }
+  
+  .topNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .topNav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 15px;
+  }
+  
+  body {
+    background-image: linear-gradient(to right, skyblue, white);
+    margin: 0; /* Remove default body margin */
+  }
+  .topNav {
+    background-color: limegreen;
+    padding: 15px;
+    text-align: left; /* Align navigation items to the left */
+  }
+  
+  .topNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .topNav li {
+     /* Add space between list items */
+    float: right;
+  }
+  
+  .topNav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 15px;
+  }
+  
+  body {
+    margin: 0;
+    background-image: linear-gradient(to right, skyblue, white);
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    position: relative;
+
+}
+.search {
+    position: absolute;
+    top: 90px; /* Adjust distance from top */
+    right: 20px; /* Adjust distance from right */
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 40px;
+    transition: 0.5s;
+    box-shadow: 0 0 0 5px #2573ef;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Ensure search bar is above other content */
+}
+.search.active {
+    width: 240px;
+}
+.icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icon::before {
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #287dfc;
+    border-radius: 50%;
+    transform: translate(-2px, -2px);
+}
+.icon::after {
+    content: " ";
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background: #287dfc;
+    transform: translate(4px, 4px) rotate(315deg);
+}
+.input {
+    position: relative;
+    width: 200px;
+    height: 40px;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: navajowhite;
+    font-size: 14px;
+    padding: 8px 0;
+}
+ .clear {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    right: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.search.active .clear {
+    display: flex; /* Show when search bar is active */
+}
+.clear::before
+{
+    content: ' ';
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background: #999;
+    transform: rotate(45deg);
+}
+.clear::after {
+    content: ' ';
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background: #999;
+    transform: rotate(315deg);
+}
+.details {
+    position: absolute;
+    top: 180px; /* Adjust the top position to position it below the search bar */
+    left: 50px; /* Adjust left position as needed */
+    width: 90%; /* Adjust width as needed */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's above other content if necessary */
+}
+.input-container {
+    display: flex;
+    gap: 20px; /* Space between the input fields */
+    margin-bottom: 20px; /* Space below the container */
+}
+
+.input-item {
+    flex: 1; /* Allow input fields to take equal space */
+    display: flex;
+    flex-direction: column;
+}
+/* Juice Items Container */
+.selection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between the rows */
+    justify-content: center;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.juice-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between the image and input */
+}
+
+.juice-item img {
+    max-width: 100px; /* Adjust size of the images as needed */
+    height: auto;
+}
+#button{
+    width: 120px;
+    font-size: large;
+}
+
+
+
