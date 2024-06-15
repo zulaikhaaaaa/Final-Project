@@ -11,12 +11,12 @@
 <body>
     <nav class="topNav">
         <ul>
-            <li><a href="Faqs.html">FAQs</a></li>
-            <li><a href="privacyPolicy.html">Privacy Policy</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="Nutrition.html">Nutrition</a></li> 
-            <li><a href="aboutUs.html">About Us</a></li> 
-            <li><a href="homepage.html">Home</a></li>
+            <li><a href="Faqs.html" target="_blank">FAQs</a></li>
+            <li><a href="privacyPolicy.html" target="_blank">Privacy Policy</a></li>
+            <li><a href="shop.html" target="_blank">Shop</a></li>
+            <li><a href="Nutrition.html" target="_blank">Nutrition</a></li> 
+            <li><a href="aboutUs.html" target="_blank">About Us</a></li> 
+            <li><a href="homepage.html" target="_blank">Home</a></li>
         </ul>
     </nav>
     
@@ -30,58 +30,51 @@
             <p id="p2">questions here</p>
         </div>
         <div>
-            <button id="submit-button">
+            <button id="submit-button"> <!--Set a button to submit-->
                 <p>SUBMIT</p>
             </button>
         </div>
     </div>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
     <div class="right-side">
-        <div class="faq">
-            <button class="accordion">
-                1. What types of juices do you offer?
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="panel">
-                <p>
-                    We offer a variety of fresh, all-natural 
-                    juices made from fruits. Our popular flavors 
-                    include Apple Delight, Berry Blast, Tropical Mango, 
-                    and Green Power. 
-                </p>
-            </div>
-        </div>
-        <div class="faq">
-            <button class="accordion">
-                2. Are your juices organic?                
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="panel">
-                <p>
-                    Yes, all our juices are made from 100% organic fruits.
-                    We source our produce from certified organic farms to 
-                    ensure the highest quality and safety for your children.
-                </p>
-            </div>
-        </div>
-        <div class="faq">
-            <button class="accordion">
-                3. Do your juices contain any added sugars or preservatives?                
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="panel">
-                <p>
-                    No, our juices are free from added sugars, artificial 
-                    flavors, and preservatives. We believe in providing 
-                    pure, healthy beverages that are naturally delicious 
-                    and nutritious.
-                </p>
-            </div>
-        </div>
+        <ul id="accordion"> <!--Display list-->
+            <li>
+                <label for="first">What types of juices do you offer ?<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="first" checked> <!--List can be checked(ticked)-->
+                <div class="content">
+                    <p>
+                        We offer a variety of fresh, all-natural 
+                        juices made from fruits. Our popular flavors 
+                        include Apple Delight, Berry Blast, Tropical Mango, 
+                        and Green Power.   
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="second">Are your juices organic ?<span>&#x3e;</span></label> <!--The span is referring to the shape-->
+                <input type="radio" name="accordion" id="second">
+                <div class="content">
+                    <p>
+                        Yes, all our juices are made from 100% organic fruits.
+                        We source our produce from certified organic farms to 
+                        ensure the highest quality and safety for your children.   
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="third">Do your juices contain any added sugars or preservatives ?<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="third">
+                <div class="content">
+                    <p>
+                        No, our juices are free from added sugars, artificial 
+                        flavors, and preservatives. We believe in providing 
+                        pure, healthy beverages that are naturally delicious 
+                        and nutritious. 
+                    </p>
+                </div>
+            </li>
+        </ul>
     </div>        
 </body>
 </html>
-
-
-   

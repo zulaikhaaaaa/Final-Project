@@ -4,24 +4,29 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 body {
   margin: 0; /* Remove default body margin */
   background-image: linear-gradient(to right, skyblue, white);
 }
+
 .topNav {
   background-color: limegreen;
   padding: 15px;
   overflow: hidden; /* Clear floats */
   text-align: left; /* Align content to the left */
 }
+
 .topNav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
 .topNav li {
   float: right; /* Align list items to the right */
 }
+
 .topNav a {
   color: white;
   text-decoration: none;
@@ -29,28 +34,30 @@ body {
   padding: 15px;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
+
 .topNav a:hover {
   background-color: #C24641 ; /* Change this to the desired background hover color */
   color: tan; /* Change this to the desired text hover color */
 }
+
   .container {
     display: flex;
     align-items: center;
   }
   
-  #bottle-container {
-    width: 400px; /* adjust the width of the image */
-    height: 600px;
-    margin-top: 170px;
+  #bottle-container { /*Adjust the size of the image*/
+    width: 300px;
+    height: 700px;
     margin-left: 50px;
   }
   
   #list-container {
     flex: 1; /* make the list take up the remaining space */
     list-style: none;
-    padding: 20px;
-    margin-top: 220px;
     font-size: large;
+    float: left; /*Set the list to the left, right next to the image*/
+    margin-top: 150px;
+    margin-left: 20px;
   }
 
   .bold {
@@ -66,6 +73,7 @@ body {
   #image-2 {
     width: 237px;
     height: 250px;
+    margin-top: 50px;
     padding-top: 20px;
     border-radius: 50%;
     overflow: hidden; 
@@ -93,20 +101,25 @@ body {
 
   #fact-text-container {
     flex: 1; /* make the list take up the remaining space */
+    flex-direction: row;
     padding: 20px;
-    margin-top: 220px;
   }
 
   #fact-1 {
     flex: 1; /* make the list take up the remaining space */
     font-size: large;
+    padding-bottom: 200px;
   }
 
   #fact-2 {
+    flex: 1;
     font-size: large;
+    padding-bottom: 120px;
+
   }
 
   #fact-3 {
+    flex: 1;
     font-size: large;
   }
 

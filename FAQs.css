@@ -4,31 +4,41 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
-  
-  .topNav a  {
-      color: white;
-      text-decoration: none;
-      font-size: 17px;
-      padding: 15px;
-      display: block;
-      text-align: center;
-    }
-  
-    .topNav ul{
-      list-style-type: none;
-      background-color: limegreen;
-      padding: 0px;
-      margin: 0px;
-      overflow: hidden;
-    }
-  
-    .topNav li{
-      float: right;
-    }
-  
-    body {
-      background-image: linear-gradient(to right, skyblue, white);
-    }
+
+  body {
+    margin: 0; /* Remove default body margin */
+    background-image: linear-gradient(to right, skyblue, white);
+  }
+
+  .topNav {
+    background-color: limegreen;
+    padding: 15px;
+    overflow: hidden; /* Clear floats */
+    text-align: left; /* Align content to the left */
+  }
+
+  .topNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .topNav li {
+    float: right; /* Align list items to the right */
+  }
+
+  .topNav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+
+  .topNav a:hover {
+    background-color: #C24641 ; /* Change this to the desired background hover color */
+    color: tan; /* Change this to the desired text hover color */
+  }
 
     h1 {
         font-size: 50px;
@@ -40,7 +50,7 @@
     .left-side {
         display: flex;
         flex-direction: column;
-        margin-left: 20px;
+        margin-left: 100px;
         align-items: center;
         float: left;
 
@@ -63,7 +73,7 @@
     }
 
     .quest-box p {
-        opacity: 70%;
+        opacity: 70%; /*To make the the text looks a bit transparent*/
         font-size: large;
     }
 
@@ -76,7 +86,7 @@
         border-radius: 50%;
         width: 150px;
         height: 40px;
-        background-color: black;
+        background-color: crimson;
     }
 
     button p {
@@ -86,55 +96,65 @@
     .right-side {
         display: flex;
         flex-direction: column;
-        margin-right: 200px;
-        margin-top: 50px;
+        margin-right: 250px;
         align-items: center;
         float: right;
     }
 
-    .faq {
-        border: dashed;
-        margin: 20px;
-        display: block;
-        border: none;
+    #accordion {
+        margin: 100px auto;
+        width: 600px;
     }
 
-    .accordion {
-        background-color: burlywood;
-        color: black;
-        cursor: pointer;
-        font-size:  1.2rem;
-        padding: 2rem 2.5rem;
-        transition: 0.4s;
+    #accordion li{
+        list-style: none;
+        width: 100%;
+        margin-bottom: 10px;
+        background: darkcyan;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    #accordion li label {
+        padding: 10px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        font-size: large;
+        cursor: pointer;
+        color: black;
+        font-style: oblique;
         font-weight: bold;
     }
 
-    .accordion i {
-        font-size: 1.6rem;
+    #accordion li label span {
+        transform: rotate(90deg); /*Change the orientation of the object*/
+        font-size: 25px;
+        color: gold;
     }
 
-    .active, .accordion:hover {
-        background-color: aqua;
+    #accordion label + input[type="radio"]{
+        display: none;
     }
 
-    .panel p {
-        color: blue;
-        font-size: 1.2rem;
-        line-height: 1.4;
-    }
-
-    .panel {
-        padding: 0 2rem 2.5rem 2rem;
-        background-color: antiquewhite;
-        overflow: hidden;
-        background-color: aqua;
+    #accordion .content {
+        padding: 0 10px;
+        line-height: 26px;
         max-height: 0;
-        transition: max-height 0.4s;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        font-style: oblique;
+        color: yellow;
+        font-size: large;
     }
 
-    .panel.show {
-        max-height: 300px;
+    #accordion label + input[type="radio"]:checked + .content {
+        max-height: 400px;
     }
+
+
+
+
+
+    
     
