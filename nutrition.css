@@ -1,3 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 .topNav a  {
     color: white;
     text-decoration: none;
@@ -47,16 +54,26 @@
     font-weight: bold;
   }
 
+  #image-1 {
+    margin-top: 20px;
+    border-radius: 50%; /* makes the container round */
+    overflow: hidden; /* clips the container to the round shape */
+  }
+
   #image-2 {
     width: 237px;
     height: 250px;
     padding-top: 20px;
+    border-radius: 50%;
+    overflow: hidden; 
   }
 
   #image-3 {
     width: 237px;
     height: 240px;
     padding-top: 20px;
+    border-radius: 50%; /* makes the container round */
+    overflow: hidden; /* clips the container to the round shape */
   }
 
   #fact-image-container {
@@ -64,11 +81,10 @@
    flex: 1;
    flex-direction: column;
    align-items: center;
+   margin-top: 20px;
   }
 
   #fact-image-container img {
-   width: 250px; /* set the width of each image to 100% of the container */
-   height: auto; /* set the height of each image to auto */
    margin-bottom: 20px; /* add a margin between each image */
   }
 
@@ -89,6 +105,18 @@
 
   #fact-3 {
     font-size: large;
+  }
+
+  #image {
+    transition: opacity 0.5s; /* fade out/in over 0.5 seconds */
+  }
+  
+  #image.fade-out {
+    opacity: 0;
+  }
+  
+  #image.fade-in {
+    opacity: 1;
   }
 
 
