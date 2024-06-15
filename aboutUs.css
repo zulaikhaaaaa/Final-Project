@@ -56,6 +56,10 @@ body {
   background-color: #C24641 ; /* Change this to the desired background hover color */
   color: tan; /* Change this to the desired text hover color */
 }
+#logo{
+  width: 50px;
+  height: 16px;
+}
 body {
   margin: 0;
   background-image: linear-gradient(to right, skyblue, white);
@@ -63,6 +67,9 @@ body {
 h1{
   margin: 40px;
   text-align: center;
+  font-style: oblique;
+  text-decoration: underline;
+
 }
 .content {
   margin: 20px auto;
@@ -87,6 +94,7 @@ h1{
   flex: 2; /* Let the text take up 2 parts of the flex container */
   border: inset; /* Example border style */
   padding: 20px; /* Add padding inside the text container */
+  background-color: lightcyan;
 }
 
 #text h2 {
@@ -177,4 +185,41 @@ h1{
 .testimonial-image img {
     border-radius: 50%; /* Make the image circular */
     max-width: 100px; /* Adjust maximum width of the image */
+}
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 10px; /* Adjust gap between image and text */
+  }
+
+  #img,
+  #text {
+    flex: 1; /* Let both image and text take up full width */
+  }
+
+  .info {
+    flex-direction: column; /* Stack info sections vertically */
+  }
+
+  .vertical-line {
+    display: none; /* Hide vertical line on smaller screens */
+  }
+
+  .testimonial-content {
+    flex-direction: column; /* Stack testimonial items vertically */
+    margin-top: 20px; /* Adjust margin */
+  }
+
+  .testimonial-image {
+    margin: 20px; /* Adjust spacing around testimonial images */
+  }
+
+  .testimonial-text {
+    font-size: 16px; /* Decrease font size for better readability */
+    padding: 8px; /* Adjust padding for comment-like box */
+  }
+
+  .testimonial-image img {
+    max-width: 80px; /* Adjust maximum width of the image */
+  }
 }

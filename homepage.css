@@ -1,27 +1,35 @@
+/* Global reset and base styles */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+/* Body styles */
 body {
-  margin: 0; /* Remove default body margin */
+  margin: 0;
   background-image: linear-gradient(to right, skyblue, white);
 }
+
+/* Top navigation bar */
 .topNav {
   background-color: limegreen;
   padding: 15px;
-  overflow: hidden; /* Clear floats */
-  text-align: left; /* Align content to the left */
+  overflow: hidden;
+  text-align: left;
 }
+
 .topNav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
 .topNav li {
-  float: right; /* Align list items to the right */
+  float: right;
 }
+
 .topNav a {
   color: white;
   text-decoration: none;
@@ -29,110 +37,109 @@ body {
   padding: 15px;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
+
 .topNav a:hover {
-  background-color: #C24641 ; /* Change this to the desired background hover color */
-  color: tan; /* Change this to the desired text hover color */
+  background-color: #C24641;
+  color: tan;
 }
-.h1{
+
+/* Logo styles */
+#logo {
+  width: 50px;
+  height: 16px;
+}
+
+/* Heading styles */
+.h1 {
   margin: 20px;
   text-align: center;
+  font-style: oblique;
+  text-decoration: underline;
 }
-.wrapper {
-  position: absolute;
-  top: 100px;
-  right: 6%;
-  max-width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-#pic {
-  max-width: 100%;
-  max-height:100%;
-}
-#main{
-  border: inset;
-  max-width: 60%;
-}
-#main h1{
-  font-size: 25px;
-  padding-left: 20px;
-  font-family: 'Courier New', Courier, monospace;
-}
-#main p{
-  font-size: 20px;
-  padding-left: 20px;
-  font-family: 'Times New Roman', Times, serif;
-}
-.content {
-  position: absolute;
-  top: 200px;
-  right: 6%;
-  max-width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-#img {
-  max-width: 90%;
-  max-height:90%;
-}
-#text{
-  border: inset;
-  max-width: 60%;
-}
-#text h1{
-  font-size: 25px;
-  padding-left: 20px;
-  font-family: 'Courier New', Courier, monospace;
-}
-#text p{
-  font-size: 20px;
-  padding-left: 20px;
-  font-family: 'Times New Roman', Times, serif;
-}
+
+/* Main content wrapper styles */
+.wrapper,
+.content,
 .wrapper2 {
-  position: absolute;
-  top: 800px;
-  right: 6%;
+  position: relative;
   max-width: 80%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-#pic2 img{
-  width: 70%;
-  height:70%;
-}
-#main2{
+
+/* Individual content section styles */
+#main,
+#text,
+#main2 {
   border: inset;
-  max-width: 60%;
+  background-color: lightcyan;
 }
-#main2 h1{
-  font-size: 25px;
-  padding-left: 20px;
+
+/* Heading and paragraph styles within content sections */
+#main h1,
+#text h1,
+#main2 h1 {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
 }
-#main2 p{
-  font-size: 20px;
-  padding-left: 20px;
+#main p,
+#text p,
+#main2 p {
   font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
 }
 
+/* Image styles */
+#pic img,
+#pic2 img,
+#img img {
+  max-width: 100%; /* Ensure image does not overflow its container */
+  display: block; /* Remove extra space below image */
+  border: 5px double;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  #main,
+  #text,
+  #main2 {
+    border: inset; /* Retain border style on smaller screens */
+  }
+}
+
+/* Universal width setting for main content sections */
+#pic,
+#main,
+#main h1,
+#main p,
+#text,
+#text h1,
+#text p,
+#main2,
+#main2 h1,
+#main2 p {
+  width: 100%;
+}
+
+/* Adjust image width for smaller screens */
+#pic,
+#pic2 img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer styles */
 .footer {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 1200px;
+  position: relative;
   background-color: limegreen;
-  color: white; /* Text color */
+  color: white;
   padding: 20px;
-
 }
 
+/* Footer content layout */
 .footer-content {
   display: flex;
   justify-content: space-around;
@@ -140,42 +147,52 @@ body {
   flex-wrap: wrap;
 }
 
+/* Sections within the footer */
 .contact-info,
 .social-links,
 .shipping-info {
-  flex: 1 1 300px; /* Equal width for all sections */
+  flex: 1 1 300px;
   text-align: center;
   padding: 20px;
 }
 
+/* Header style for each section in footer */
 .contact-info h2,
 .social-links h2,
 .shipping-info h2 {
-  border-bottom: 2px solid #777; /* Bottom border for section titles */
+  border-bottom: 2px solid #777;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
+/* Social links images */
 .social-links img {
-  margin: 10px; /* Add some spacing around social icons */
-  overflow: hidden;
+  margin: 10px;
 }
 
-/* Adjustments for smaller screens */
+/* Responsive adjustments for footer on smaller screens */
 @media (max-width: 768px) {
+  .wrapper,
+  .content,
+  .wrapper2 {
+    flex-direction: column;
+  }
+
   .footer-content {
-      flex-direction: column; /* Stack sections vertically on smaller screens */
+    flex-direction: column;
   }
 
   .contact-info,
   .social-links,
   .shipping-info {
-      width: 100%; /* Full width for each section on smaller screens */
-      margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
-#copyright{
-    margin-top: 20px;
-    font-size: 14px;
-    text-align: center;
+
+/* Copyright notice at the bottom */
+#copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
 }

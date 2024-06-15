@@ -1,11 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() { //to active the toggle method for search abr
     const icon = document.querySelector('.icon');
     const search = document.querySelector('.search');
 
     icon.addEventListener('click', function() {
         search.classList.toggle('active');
     });
-
     const button = document.getElementById('button');
     const display_order = document.getElementById('display_order');
     const display_apple = document.getElementById('display_apple');
@@ -15,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const display_strawberry = document.getElementById('display_strawberry');
     const display_watermelon = document.getElementById('display_watermelon');
     const total = document.getElementById('total');
+    const thanks = document.getElementById('thanks')
 
     // Function to calculate total for each juice type
     function Total_apple(a_qty){
@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let msg6 = "STRAWBERRY " + s_qty + " = $" + total_s;
         let msg7 = "WATERMELON " + w_qty + " = $" + total_w;
         let msg8 = "Total = $" + total_amount;
+        let msg9 = "Thank you for choosing our product :"
 
         // Display the calculated values
         display_order.innerHTML = msg1;
@@ -82,5 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
         display_strawberry.innerHTML = msg6;
         display_watermelon.innerHTML = msg7;
         total.innerHTML = msg8;
+        thanks.innerHTML = msg9;
     });
 });
