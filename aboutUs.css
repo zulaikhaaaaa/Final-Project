@@ -50,8 +50,12 @@ body {
   text-decoration: none;
   font-size: 17px;
   padding: 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
-
+.topNav a:hover {
+  background-color: #C24641 ; /* Change this to the desired background hover color */
+  color: tan; /* Change this to the desired text hover color */
+}
 body {
   margin: 0;
   background-image: linear-gradient(to right, skyblue, white);
