@@ -1,3 +1,5 @@
+<!--NUR RASHIDAH BINTI KHAMISAN 2317374-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQs</title>
     <link rel="stylesheet" href="FAQs.css">
+    <script src="FAQs.js"></script>
+
 </head>
 <body>
     <nav class="topNav">
         <ul>
-            <li><a href="Faqs.html">FAQs</a></li>
-            <li><a href="privacyPolicy.html">Privacy Policy</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="Nutrition.html">Nutrition</a></li> 
-            <li><a href="aboutUs.html">About Us</a></li> 
-            <li><a href="homepage.html">Home</a></li>
+            <li><a href="Faqs.html" target="_blank">FAQs</a></li>
+            <li><a href="privacyPolicy.html" target="_blank">Privacy Policy</a></li>
+            <li><a href="shop.html" target="_blank">Shop</a></li>
+            <li><a href="Nutrition.html" target="_blank">Nutrition</a></li> 
+            <li><a href="aboutUs.html" target="_blank">About Us</a></li> 
+            <li><a href="homepage.html" target="_blank">Home</a></li>
         </ul>
     </nav>
     
@@ -28,13 +32,51 @@
             <p id="p2">questions here</p>
         </div>
         <div>
-            <button>
+            <button id="submit-button"> <!--Set a button to submit-->
                 <p>SUBMIT</p>
             </button>
         </div>
     </div>
 
-    
-        
+
+    <div class="right-side">
+        <ul id="accordion"> <!--Display list-->
+            <li>
+                <label for="first">What types of juices do you offer ?<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="first" checked> <!--List can be checked(ticked)-->
+                <div class="content">
+                    <p>
+                        We offer a variety of fresh, all-natural 
+                        juices made from fruits. Our popular flavors 
+                        include Apple Delight, Berry Blast, Tropical Mango, 
+                        and Green Power.   
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="second">Are your juices organic ?<span>&#x3e;</span></label> <!--The span is referring to the shape-->
+                <input type="radio" name="accordion" id="second">
+                <div class="content">
+                    <p>
+                        Yes, all our juices are made from 100% organic fruits.
+                        We source our produce from certified organic farms to 
+                        ensure the highest quality and safety for your children.   
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="third">Do your juices contain any added sugars or preservatives ?<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="third">
+                <div class="content">
+                    <p>
+                        No, our juices are free from added sugars, artificial 
+                        flavors, and preservatives. We believe in providing 
+                        pure, healthy beverages that are naturally delicious 
+                        and nutritious. 
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>        
 </body>
 </html>
