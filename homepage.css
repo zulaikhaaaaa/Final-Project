@@ -4,34 +4,34 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
 body {
   margin: 0; /* Remove default body margin */
   background-image: linear-gradient(to right, skyblue, white);
 }
-
 .topNav {
   background-color: limegreen;
   padding: 15px;
   overflow: hidden; /* Clear floats */
   text-align: left; /* Align content to the left */
 }
-
 .topNav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-
 .topNav li {
   float: right; /* Align list items to the right */
 }
-
 .topNav a {
   color: white;
   text-decoration: none;
   font-size: 17px;
   padding: 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.topNav a:hover {
+  background-color: #C24641 ; /* Change this to the desired background hover color */
+  color: tan; /* Change this to the desired text hover color */
 }
 .h1{
   margin: 20px;
